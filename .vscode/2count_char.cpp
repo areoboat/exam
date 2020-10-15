@@ -6,7 +6,7 @@
 // 输出输入字符串中含有该字符的个数。
 #include "string.h"
 #include <iostream>
-#include <stdio.h>
+#include "stdio.h"
 using namespace std;
 
 int main(void)
