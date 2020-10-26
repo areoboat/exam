@@ -8,3 +8,54 @@
 // 输出描述:
 // 输出到长度为8的新字符串数组
 
+#include <iostream>
+#include "string"
+using namespace std;
+
+int main(void)
+{
+    string  input = "";
+    while (cin>>input)
+    {
+        int index = 0;
+
+        if(input == "")
+            continue;
+        else 
+        {
+            if(input.length() <= 8)  // 空
+            {
+                cout<<input<<endl;
+            }
+            else
+            {
+                string output = "";
+                while(index < input.length())    //找到末尾
+                {
+                    if((index % 8 == 0) && (index>0))  //数满8个字符
+                    {
+                        cout << output <<endl;
+                        output =  input[index];
+                    }
+                    else
+                    {
+                        output += input[index];
+                    }
+                    index ++;
+                }
+                if(output !="")
+                {
+                    for(int i= output.length(); i<8; i++)    // 末尾不够8个，补0
+                        output += "0";
+                    
+                    cout << output <<endl;
+                }
+                    
+            } 
+        }
+        
+            
+    }
+
+    return 0;
+}

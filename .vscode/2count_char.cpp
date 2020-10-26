@@ -18,8 +18,8 @@ int main(void)
     int cnt;
 
     getline(cin, str);  //a line
-    //cin>>ch; 
-    ch = getchar();            //a string without space
+    cin>>ch; 
+    //ch = getchar();            //a string without space
 
     if((str == " ") || (ch == ' '))  //不数空格
         cnt = 0;
